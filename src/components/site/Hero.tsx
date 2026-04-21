@@ -21,6 +21,60 @@ export function Hero() {
       </div>
       <div className="absolute inset-0 -z-10 bg-background/60" />
 
+      {/* 3D atmospheric backdrop — floating orbs, grid plane, film strip */}
+      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+        {/* Perspective grid floor */}
+        <div
+          className="absolute -bottom-1/4 left-1/2 -translate-x-1/2 w-[180%] h-[60%] opacity-[0.12]"
+          style={{
+            backgroundImage:
+              "linear-gradient(to right, oklch(0.78 0.16 65 / 0.6) 1px, transparent 1px), linear-gradient(to bottom, oklch(0.78 0.16 65 / 0.6) 1px, transparent 1px)",
+            backgroundSize: "60px 60px",
+            transform: "perspective(800px) rotateX(65deg)",
+            maskImage: "linear-gradient(to top, black 10%, transparent 80%)",
+            WebkitMaskImage: "linear-gradient(to top, black 10%, transparent 80%)",
+          }}
+        />
+        {/* Floating glow orbs */}
+        <div
+          className="absolute top-[15%] left-[8%] w-72 h-72 rounded-full blur-3xl opacity-40 animate-glow-pulse"
+          style={{ background: "radial-gradient(circle, oklch(0.78 0.16 65 / 0.5), transparent 70%)" }}
+        />
+        <div
+          className="absolute bottom-[20%] right-[5%] w-96 h-96 rounded-full blur-3xl opacity-30 animate-glow-pulse"
+          style={{
+            background: "radial-gradient(circle, oklch(0.7 0.14 200 / 0.45), transparent 70%)",
+            animationDelay: "1.5s",
+          }}
+        />
+        <div
+          className="absolute top-[55%] left-[45%] w-64 h-64 rounded-full blur-3xl opacity-25 animate-glow-pulse"
+          style={{
+            background: "radial-gradient(circle, oklch(0.62 0.18 30 / 0.5), transparent 70%)",
+            animationDelay: "0.8s",
+          }}
+        />
+        {/* Film strip suggestion — rotating */}
+        <div
+          className="absolute -right-20 top-1/3 w-40 h-[120%] opacity-[0.08]"
+          style={{
+            backgroundImage:
+              "repeating-linear-gradient(0deg, oklch(0.97 0.01 90) 0 6px, transparent 6px 28px)",
+            transform: "rotate(12deg)",
+            maskImage: "radial-gradient(ellipse at center, black, transparent 70%)",
+            WebkitMaskImage: "radial-gradient(ellipse at center, black, transparent 70%)",
+          }}
+        />
+        {/* Subtle scanlines */}
+        <div
+          className="absolute inset-0 opacity-[0.04] mix-blend-overlay"
+          style={{
+            backgroundImage:
+              "repeating-linear-gradient(0deg, oklch(1 0 0) 0 1px, transparent 1px 4px)",
+          }}
+        />
+      </div>
+
       <div className="relative mx-auto max-w-7xl w-full grid lg:grid-cols-12 gap-10 items-center">
         {/* Left: Text */}
         <div className="lg:col-span-5 space-y-6">
