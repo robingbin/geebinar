@@ -29,19 +29,31 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "GEEBIN A R — VFX Compositor | Cinematic Visual Storytelling" },
+      { name: "description", content: "Portfolio of GEEBIN A R, a professional VFX Compositor crafting cinematic reality for films and digital media." },
+      { name: "author", content: "GEEBIN A R" },
+      { property: "og:title", content: "GEEBIN A R — VFX Compositor" },
+      { property: "og:description", content: "Crafting cinematic reality. Featured films include Indian 2, Thug Life, Raayan, Vidamuyarchi and more." },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
+      },
+      {
+        rel: "preconnect",
+        href: "https://fonts.googleapis.com",
+      },
+      {
+        rel: "preconnect",
+        href: "https://fonts.gstatic.com",
+        crossOrigin: "anonymous",
+      },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap",
       },
     ],
   }),
