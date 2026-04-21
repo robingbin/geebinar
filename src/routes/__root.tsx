@@ -32,10 +32,14 @@ export const Route = createRootRoute({
       { title: "GEEBIN A R — VFX Compositor | Cinematic Visual Storytelling" },
       { name: "description", content: "Portfolio of GEEBIN A R, a professional VFX Compositor crafting cinematic reality for films and digital media." },
       { name: "author", content: "GEEBIN A R" },
-      { property: "og:title", content: "GEEBIN A R — VFX Compositor" },
-      { property: "og:description", content: "Crafting cinematic reality. Featured films include Indian 2, Thug Life, Raayan, Vidamuyarchi and more." },
+      { property: "og:title", content: "GEEBIN A R — VFX Compositor | Cinematic Visual Storytelling" },
+      { property: "og:description", content: "Portfolio of GEEBIN A R, a professional VFX Compositor crafting cinematic reality for films and digital media." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "GEEBIN A R — VFX Compositor | Cinematic Visual Storytelling" },
+      { name: "twitter:description", content: "Portfolio of GEEBIN A R, a professional VFX Compositor crafting cinematic reality for films and digital media." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/353b4e24-253d-412f-8816-e58020ca5d27/id-preview-e8cf9d91--7cda2903-56d4-448a-8bc7-341f1307f764.lovable.app-1776750920212.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/353b4e24-253d-412f-8816-e58020ca5d27/id-preview-e8cf9d91--7cda2903-56d4-448a-8bc7-341f1307f764.lovable.app-1776750920212.png" },
     ],
     links: [
       {
