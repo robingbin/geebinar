@@ -75,15 +75,15 @@ export function Hero() {
         />
       </div>
 
-      <div className="relative mx-auto max-w-7xl w-full grid lg:grid-cols-12 gap-10 items-center">
+      <div className="relative mx-auto max-w-7xl w-full grid md:grid-cols-12 gap-8 md:gap-10 items-center">
         {/* Left: Text */}
-        <div className="lg:col-span-5 space-y-6">
+        <div className="md:col-span-5 space-y-5 sm:space-y-6">
           <div className="inline-flex items-center gap-2 glass px-4 py-1.5 rounded-full text-[10px] tracking-[0.35em] uppercase text-muted-foreground animate-fade-in">
             <span className="w-1.5 h-1.5 rounded-full bg-primary animate-glow-pulse" />
             VFX Compositor · Available for projects
           </div>
 
-          <h1 className="font-display text-6xl sm:text-7xl lg:text-[6.5rem] leading-[0.9] tracking-tight text-foreground">
+          <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-[6.5rem] leading-[0.9] tracking-tight text-foreground">
             <span className="block animate-letter-rise" style={{ animationDelay: "0.1s" }}>
               GEEBIN
             </span>
@@ -134,20 +134,46 @@ export function Hero() {
 
         {/* Right: Before/After slider */}
         <div
-          className="lg:col-span-7 aspect-[16/10] w-full animate-fade-up"
+          className="md:col-span-7 relative aspect-[16/10] w-full animate-fade-up"
           style={{ animationDelay: "0.4s" }}
         >
+          {/* Decorative floating accents around the frame */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -top-6 -left-6 w-24 h-24 rounded-full blur-2xl opacity-60 animate-glow-pulse"
+            style={{ background: "radial-gradient(circle, oklch(0.78 0.16 65 / 0.55), transparent 70%)" }}
+          />
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -bottom-8 -right-8 w-32 h-32 rounded-full blur-3xl opacity-50 animate-glow-pulse"
+            style={{
+              background: "radial-gradient(circle, oklch(0.7 0.14 200 / 0.5), transparent 70%)",
+              animationDelay: "1s",
+            }}
+          />
+          {/* Corner brackets — cinematic framing */}
+          <span aria-hidden className="absolute -top-3 -left-3 w-8 h-8 border-t-2 border-l-2 border-primary/70" />
+          <span aria-hidden className="absolute -top-3 -right-3 w-8 h-8 border-t-2 border-r-2 border-primary/70" />
+          <span aria-hidden className="absolute -bottom-3 -left-3 w-8 h-8 border-b-2 border-l-2 border-primary/70" />
+          <span aria-hidden className="absolute -bottom-3 -right-3 w-8 h-8 border-b-2 border-r-2 border-primary/70" />
+
           <BeforeAfterSlider
             beforeSrc={beforeImg}
             afterSrc={afterImg}
             beforeLabel="Before · Raw Plate"
             afterLabel="After · Final VFX"
           />
+
+          {/* Floating spec chip */}
+          <div className="hidden sm:flex absolute -bottom-5 left-6 glass px-4 py-2 rounded-full items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-foreground/90 shadow-cinematic">
+            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-glow-pulse" />
+            Drag to reveal · Comp breakdown
+          </div>
         </div>
       </div>
 
       {/* Tagline strip */}
-      <div className="relative mx-auto max-w-7xl w-full mt-16 pt-8 border-t border-border/50 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center sm:text-left">
+      <div className="relative mx-auto max-w-7xl w-full mt-20 sm:mt-24 pt-8 border-t border-border/50 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center sm:text-left">
         {[
           { k: "16+", v: "Feature Films" },
           { k: "120+", v: "VFX Shots" },
