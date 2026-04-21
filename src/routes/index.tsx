@@ -17,7 +17,43 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <div className="relative min-h-screen bg-background text-foreground overflow-x-hidden">
+    <div className="relative min-h-screen bg-site-cinematic text-foreground overflow-x-hidden">
+      {/* Global cinematic 3D backdrop */}
+      <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+        {/* Aurora blobs */}
+        <div
+          className="absolute -top-40 -left-40 w-[55vw] h-[55vw] rounded-full blur-3xl opacity-50 animate-aurora"
+          style={{ background: "radial-gradient(circle, oklch(0.78 0.16 65 / 0.35), transparent 60%)" }}
+        />
+        <div
+          className="absolute top-[30%] -right-40 w-[60vw] h-[60vw] rounded-full blur-3xl opacity-40 animate-aurora-2"
+          style={{ background: "radial-gradient(circle, oklch(0.7 0.14 200 / 0.32), transparent 60%)" }}
+        />
+        <div
+          className="absolute bottom-[-20%] left-[20%] w-[50vw] h-[50vw] rounded-full blur-3xl opacity-35 animate-aurora"
+          style={{ background: "radial-gradient(circle, oklch(0.62 0.18 30 / 0.3), transparent 60%)" }}
+        />
+        {/* Mesh / dot grid */}
+        <div
+          className="absolute inset-0 opacity-[0.06]"
+          style={{
+            backgroundImage:
+              "radial-gradient(oklch(0.97 0.01 90) 1px, transparent 1px)",
+            backgroundSize: "32px 32px",
+            maskImage: "radial-gradient(ellipse at center, black 30%, transparent 75%)",
+            WebkitMaskImage: "radial-gradient(ellipse at center, black 30%, transparent 75%)",
+          }}
+        />
+        {/* Vignette */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(ellipse at center, transparent 40%, oklch(0.04 0.005 260 / 0.85) 100%)",
+          }}
+        />
+      </div>
+
       <CursorGlow />
       <Navbar />
       <main>
