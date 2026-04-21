@@ -59,7 +59,7 @@ export function About() {
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 pt-6 border-t border-border/40">
             {[
               { k: "Compositing", v: "Nuke · After Effects" },
-              { k: "Specialties", v: "Keying · Roto · Comp" },
+              { k: "Specialties", v: "Comp · Keying · Paint · Roto" },
               { k: "Based In", v: "Chennai, India" },
             ].map((s) => (
               <div key={s.k}>
