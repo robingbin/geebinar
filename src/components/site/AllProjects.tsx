@@ -16,7 +16,7 @@ type Project = {
   poster?: string;
 };
 
-const projects: Project[] = [
+const projects: Project[] = ([
   { title: "Indian 2", category: "Film", year: "2024", date: "2024-07-12", poster: indian2 },
   { title: "Raayan", category: "Film", year: "2024", date: "2024-07-26", poster: raayan },
   { title: "Nilavuku En Mel Ennadi Kobam", category: "Film", year: "2024", date: "2024-10-25", poster: nilavuku },
@@ -33,9 +33,7 @@ const projects: Project[] = [
   { title: "Unnil Kadhala", category: "Ad", year: "2023", date: "2023-09-01" },
   { title: "Train", category: "Ad", year: "2023", date: "2023-06-01" },
   { title: "Local News", category: "News", year: "2022", date: "2022-01-01" },
-]
-  .slice()
-  .sort((a, b) => (a.date < b.date ? 1 : -1));
+] as Project[]).sort((a, b) => (a.date < b.date ? 1 : -1));
 
 const placeholderGradients = [
   "linear-gradient(135deg, oklch(0.25 0.08 30), oklch(0.12 0.02 260))",

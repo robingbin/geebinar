@@ -31,7 +31,7 @@ export function Navbar() {
         }`}
       >
         <a href="#top" className="font-display text-xl tracking-widest text-foreground">
-          GEEBIN<span className="text-primary">.</span>AR
+          GEEBIN<span className="text-primary"> </span>A R
         </a>
         <nav className="hidden md:flex items-center gap-8">
           {links.map((l) => (
