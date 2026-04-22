@@ -78,19 +78,19 @@ const disciplines = [
 
 const experience = [
   {
-    period: "2024 — Present",
-    role: "Senior VFX Compositor",
-    place: "Freelance — Feature & Episodic",
-  },
-  {
-    period: "2022 — 2024",
+    period: "2025 — Present",
     role: "VFX Compositor",
-    place: "Leading VFX Studio",
+    place: "Freelance — VFX Artist & Video Editor",
   },
   {
-    period: "2020 — 2022",
-    role: "Junior Compositor",
-    place: "Boutique Post House",
+    period: "2023 — 2025",
+    role: "Junior VFX Compositor",
+    place: "AJAX VFX, Chennai",
+  },
+  {
+    period: "2022 — 2023",
+    role: "VFX Intern",
+    place: "Maac Studio, Chennai",
   },
 ];
 
