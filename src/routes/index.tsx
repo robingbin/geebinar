@@ -62,6 +62,65 @@ function Index() {
               "repeating-linear-gradient(115deg, transparent 0 80px, oklch(from var(--primary) l c h / 0.04) 80px 82px)",
           }}
         />
+        {/* 3D wireframe cubes — left & right */}
+        <div className="absolute top-[14%] left-[4%] w-40 h-40 opacity-60" style={{ perspective: "800px" }}>
+          <div className="w-full h-full animate-spin-slow" style={{ transformStyle: "preserve-3d", transform: "rotateX(45deg) rotateY(45deg)" }}>
+            {[
+              "translateZ(80px)",
+              "translateZ(-80px) rotateY(180deg)",
+              "rotateY(90deg) translateZ(80px)",
+              "rotateY(-90deg) translateZ(80px)",
+              "rotateX(90deg) translateZ(80px)",
+              "rotateX(-90deg) translateZ(80px)",
+            ].map((t, i) => (
+              <div key={i} className="absolute inset-0 border border-primary/30" style={{ transform: t }} />
+            ))}
+          </div>
+        </div>
+        <div className="absolute bottom-[18%] right-[5%] w-52 h-52 opacity-50" style={{ perspective: "1000px" }}>
+          <div className="w-full h-full animate-spin-slower" style={{ transformStyle: "preserve-3d", transform: "rotateX(35deg) rotateY(-25deg)" }}>
+            {[
+              "translateZ(104px)",
+              "translateZ(-104px) rotateY(180deg)",
+              "rotateY(90deg) translateZ(104px)",
+              "rotateY(-90deg) translateZ(104px)",
+              "rotateX(90deg) translateZ(104px)",
+              "rotateX(-90deg) translateZ(104px)",
+            ].map((t, i) => (
+              <div key={i} className="absolute inset-0 border border-accent/30" style={{ transform: t }} />
+            ))}
+          </div>
+        </div>
+        {/* Twinkling stars / particles */}
+        <div
+          className="absolute inset-0 opacity-50"
+          style={{
+            backgroundImage:
+              "radial-gradient(1px 1px at 20% 30%, var(--primary), transparent 50%), radial-gradient(1px 1px at 70% 60%, var(--accent), transparent 50%), radial-gradient(1px 1px at 40% 80%, var(--primary), transparent 50%), radial-gradient(1.5px 1.5px at 85% 20%, var(--accent), transparent 50%), radial-gradient(1px 1px at 10% 70%, var(--primary), transparent 50%), radial-gradient(1px 1px at 60% 15%, var(--accent), transparent 50%)",
+            backgroundSize: "100% 100%",
+            animation: "glow-pulse 5s ease-in-out infinite",
+          }}
+        />
+        {/* Hex grid pattern (light shows in light theme, subtle in dark) */}
+        <div
+          className="absolute inset-0 opacity-[0.05]"
+          style={{
+            backgroundImage:
+              "linear-gradient(60deg, var(--foreground) 1px, transparent 1px), linear-gradient(-60deg, var(--foreground) 1px, transparent 1px)",
+            backgroundSize: "48px 84px",
+            maskImage: "radial-gradient(ellipse at 70% 30%, black 10%, transparent 70%)",
+            WebkitMaskImage: "radial-gradient(ellipse at 70% 30%, black 10%, transparent 70%)",
+          }}
+        />
+        {/* Floating film frames */}
+        <div
+          className="absolute top-[55%] left-[2%] w-24 h-40 border-2 border-primary/20 rounded-sm rotate-12 animate-float"
+          style={{ background: "linear-gradient(180deg, oklch(from var(--primary) l c h / 0.08), transparent)" }}
+        />
+        <div
+          className="absolute top-[8%] right-[18%] w-20 h-32 border-2 border-accent/20 rounded-sm -rotate-6 animate-float-slow"
+          style={{ background: "linear-gradient(180deg, oklch(from var(--accent) l c h / 0.08), transparent)" }}
+        />
         {/* Vignette */}
         <div
           className="absolute inset-0"

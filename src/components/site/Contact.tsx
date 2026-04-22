@@ -67,10 +67,13 @@ export function Contact() {
               · Contact
             </div>
             <h2 className="font-display text-5xl sm:text-7xl text-foreground leading-none">
-              LET'S BUILD<br />
-              <span className="text-gradient-amber">SOMETHING</span><br />
-              CINEMATIC
+              READY TO BRING<br />
+              <span className="text-gradient-amber">YOUR VISION</span><br />
+              TO LIFE?
             </h2>
+            <p className="mt-6 text-muted-foreground max-w-md">
+              From concept to final composite — delivering invisible artistry that elevates every frame.
+            </p>
           </div>
 
           <div className="space-y-4 pt-4">

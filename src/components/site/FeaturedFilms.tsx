@@ -47,7 +47,7 @@ export function FeaturedFilms() {
               · Featured Films
             </div>
             <h2 className="font-display text-5xl sm:text-7xl text-foreground leading-none">
-              SELECTED <span className="text-gradient-amber">WORK</span>
+              FEATURED <span className="text-gradient-amber">WORKS</span>
             </h2>
           </div>
           <p className="max-w-md text-muted-foreground">
