@@ -26,6 +26,18 @@ export function Navbar() {
         scrolled ? "py-3" : "py-6"
       }`}
     >
+      {/* Blur bar behind logo / nav / toggle */}
+      <div
+        aria-hidden
+        className={`absolute inset-x-0 top-0 -z-10 transition-all duration-500 ${
+          scrolled ? "h-20" : "h-28"
+        } bg-background/30 backdrop-blur-2xl backdrop-saturate-150 border-b border-border/40`}
+        style={{
+          WebkitBackdropFilter: "blur(28px) saturate(150%)",
+          maskImage: "linear-gradient(to bottom, black 70%, transparent 100%)",
+          WebkitMaskImage: "linear-gradient(to bottom, black 70%, transparent 100%)",
+        }}
+      />
       <div className="mx-auto max-w-7xl px-6 flex items-center justify-between gap-4">
         <a href="#top" className="font-display text-xl tracking-widest text-foreground shrink-0">
           GEEBIN<span className="text-primary"> </span>A R
