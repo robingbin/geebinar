@@ -90,7 +90,7 @@ export function Hero() {
             className="block mt-3 text-xl sm:text-2xl md:text-3xl tracking-[0.4em] text-shimmer animate-fade-up"
             style={{ animationDelay: "1.2s" }}
           >
-            VFX COMPOSITOR · VIDEO EDITOR
+            {"VFX COMPOSITOR \u00B7 VIDEO EDITOR"}
           </span>
         </h1>
 

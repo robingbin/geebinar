@@ -132,24 +132,16 @@ export function Contact() {
             <p className="text-sm text-primary">Opening your email client…</p>
           )}
 
-          <div className="flex flex-wrap items-center gap-4 pt-2">
+          <div className="flex justify-center pt-2">
             <button
               type="submit"
-              className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-7 py-4 rounded-full font-medium text-sm uppercase tracking-widest hover:scale-105 transition-transform glow-amber"
+              className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 rounded-full font-medium text-sm uppercase tracking-widest hover:scale-105 transition-transform glow-amber"
             >
               Send Message
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <path d="M5 12h14M13 5l7 7-7 7" />
               </svg>
             </button>
-            <a
-              href="https://wa.me/919486916959?text=Hi%20Geebin%2C%20I%27d%20like%20to%20discuss%20a%20VFX%20project."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm uppercase tracking-widest text-foreground hover:text-primary transition-colors"
-            >
-              Or chat on WhatsApp →
-            </a>
           </div>
         </form>
       </div>
