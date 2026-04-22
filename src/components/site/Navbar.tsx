@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { ThemeToggle } from "./ThemeToggle";
 
 const links = [
   { label: "Work", href: "#featured" },
@@ -44,12 +45,15 @@ export function Navbar() {
             </a>
           ))}
         </nav>
-        <a
-          href="#contact"
-          className="hidden md:inline-flex items-center gap-2 text-xs uppercase tracking-widest font-medium text-foreground border border-primary/40 hover:border-primary hover:bg-primary/10 px-4 py-2 rounded-full transition-all"
-        >
-          Hire Me
-        </a>
+        <div className="hidden md:flex items-center gap-4">
+          <ThemeToggle />
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-medium text-foreground border border-primary/40 hover:border-primary hover:bg-primary/10 px-4 py-2 rounded-full transition-all"
+          >
+            Hire Me
+          </a>
+        </div>
         <button
           aria-label="Toggle menu"
           onClick={() => setOpen((v) => !v)}
@@ -72,6 +76,10 @@ export function Navbar() {
               {l.label}
             </a>
           ))}
+          <div className="flex items-center justify-between pt-2 border-t border-border">
+            <span className="text-xs uppercase tracking-widest text-muted-foreground">Theme</span>
+            <ThemeToggle />
+          </div>
           <a
             href="#contact"
             onClick={() => setOpen(false)}
