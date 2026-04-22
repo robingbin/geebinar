@@ -37,12 +37,11 @@ export function Reels() {
               · Showreel
             </div>
             <h2 className="font-display text-5xl sm:text-7xl text-foreground leading-none">
-              MOTION <span className="text-gradient-amber">REELS</span>
+              LATEST <span className="text-gradient-amber">REELS WORKED</span>
             </h2>
           </div>
           <p className="max-w-md text-muted-foreground">
-            Behind-the-scenes breakdowns and finished VFX shots — straight from
-            my Instagram. Swipe to explore.
+            Creative video solutions · High-quality reels & storytelling · Delivering results that matter.
           </p>
         </div>
       </div>

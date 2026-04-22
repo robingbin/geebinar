@@ -28,7 +28,7 @@ export function Showreel() {
               · Showreel 2025
             </div>
             <h2 className="font-display text-5xl sm:text-7xl text-foreground leading-none">
-              THE <span className="text-gradient-amber">REEL</span>
+              VFX <span className="text-gradient-amber">SHOWREEL</span>
             </h2>
           </div>
           <p className="max-w-md text-muted-foreground">
@@ -40,7 +40,7 @@ export function Showreel() {
         <div className="reveal">
           <div className="relative aspect-video rounded-2xl overflow-hidden cinematic-shadow ring-1 ring-inset ring-foreground/10 group">
             <iframe
-              src="https://www.youtube.com/embed/y9YbLOg6gdQ?rel=0&modestbranding=1"
+              src="https://www.youtube.com/embed/y9YbLOg6gdQ?si=y4YA6LEr6cNR5IUa&rel=0&modestbranding=1"
               title="VFX Showreel"
               loading="lazy"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
