@@ -1,5 +1,3 @@
-import { CameraScene } from "./CameraScene";
-
 export function Hero() {
   const title = "GEEBIN A R";
   return (
@@ -124,14 +122,6 @@ export function Hero() {
             ▶ Watch Showreel
           </a>
         </div>
-      </div>
-
-      {/* 3D Camera workspace — scene + camera view */}
-      <div
-        className="relative mx-auto max-w-6xl w-full mt-16 sm:mt-20 animate-fade-up"
-        style={{ animationDelay: "1.8s" }}
-      >
-        <CameraScene />
       </div>
 
       {/* Stats strip */}
