@@ -184,22 +184,26 @@ export function About() {
           <div className="text-center text-[10px] tracking-[0.45em] uppercase text-accent mb-10">
             Experience
           </div>
-          <div className="max-w-xl mx-auto flex flex-col items-center gap-10 sm:gap-12 py-4">
+          <div className="max-w-2xl mx-auto flex flex-col gap-12 sm:gap-14 py-4">
             {experience.map((e, i) => (
               <div
                 key={e.period}
-                className="flex flex-col items-center text-center gap-3 group"
+                className="grid grid-cols-[110px_16px_1fr] sm:grid-cols-[140px_20px_1fr] items-start gap-4 sm:gap-8 group"
                 style={{ transitionDelay: `${i * 80}ms` }}
               >
-                <div className="font-mono text-[10px] sm:text-xs tracking-[0.3em] text-primary/80">
-                  {e.period}
+                <div className="font-mono text-[10px] sm:text-xs tracking-[0.25em] text-primary/80 pt-1.5 text-right whitespace-nowrap">
+                  {e.period.replace(" — ", "–").replace("PRESENT", "Present")}
                 </div>
-                <span className="w-2 h-2 rounded-full bg-primary group-hover:scale-150 transition-transform duration-500" />
-                <div className="text-foreground font-semibold text-base sm:text-lg leading-tight">
-                  {e.role}
+                <div className="flex justify-center pt-2">
+                  <span className="w-2 h-2 rounded-full bg-primary group-hover:scale-150 transition-transform duration-500" />
                 </div>
-                <div className="text-sm text-muted-foreground">
-                  {e.place}
+                <div className="text-left">
+                  <div className="text-foreground font-semibold text-base sm:text-lg leading-tight">
+                    {e.role}
+                  </div>
+                  <div className="text-sm text-muted-foreground mt-1">
+                    {e.place}
+                  </div>
                 </div>
               </div>
             ))}
