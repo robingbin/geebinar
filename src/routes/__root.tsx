@@ -38,8 +38,8 @@ export const Route = createRootRoute({
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "GEEBIN A R — VFX Compositor | Video Editor" },
       { name: "twitter:description", content: "VFX Compositor with years of experience delivering invisible visual effects for feature films, episodic television, and high-end advertising." },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/373b7646-2156-40b0-aff2-30615adb0e9e" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/373b7646-2156-40b0-aff2-30615adb0e9e" },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/e3lcSyyFEpey3f782W8trU6P0a02/social-images/social-1776933579574-Screenshot_2026-04-23_140811.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/e3lcSyyFEpey3f782W8trU6P0a02/social-images/social-1776933579574-Screenshot_2026-04-23_140811.webp" },
     ],
     links: [
       {
