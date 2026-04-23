@@ -99,7 +99,7 @@ export function Navbar() {
             onClick={() => setOpen(false)}
             className="text-sm uppercase tracking-widest text-primary font-medium pt-2 border-t border-border"
           >
-            Hire Me →
+          Let's Talk →
           </a>
         </div>
       )}
