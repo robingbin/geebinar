@@ -20,11 +20,11 @@ type SceneObject = {
 };
 
 const OBJECTS: SceneObject[] = [
-  { type: "cube",    pos: { x: -1.4, y:  0.0, z:  0.6 }, size: 0.7, color: "var(--primary)" },
-  { type: "sphere",  pos: { x:  1.2, y: -0.2, z: -0.4 }, size: 0.55, color: "var(--accent)" },
-  { type: "pyramid", pos: { x:  0.1, y:  0.6, z:  1.4 }, size: 0.7, color: "var(--primary)" },
-  { type: "cube",    pos: { x:  1.6, y:  0.7, z:  1.6 }, size: 0.35, color: "var(--accent)" },
-  { type: "sphere",  pos: { x: -1.0, y: -0.5, z: -1.2 }, size: 0.4,  color: "var(--primary)" },
+  { type: "cube",    pos: { x: -1.6, y: -0.3, z:  0.4 }, size: 1.2, color: "var(--primary)" },
+  { type: "sphere",  pos: { x:  1.6, y: -0.4, z: -0.2 }, size: 0.9, color: "var(--accent)" },
+  { type: "pyramid", pos: { x:  0.0, y:  0.4, z:  1.6 }, size: 1.1, color: "var(--primary)" },
+  { type: "cube",    pos: { x:  2.0, y:  0.9, z:  1.8 }, size: 0.6, color: "var(--accent)" },
+  { type: "sphere",  pos: { x: -1.4, y: -0.7, z: -1.6 }, size: 0.65, color: "var(--primary)" },
 ];
 
 // rotate a vector around Y then X (yaw, pitch)
@@ -194,13 +194,13 @@ export function CameraScene() {
     ) {
       ctx.strokeStyle = `color-mix(in oklab, ${color} 22%, transparent)`;
       ctx.lineWidth = 1;
-      const N = 10;
+      const N = 8;
       for (let i = -N; i <= N; i++) {
-        const a = project({ x: i * 0.4, y: -1, z: -N * 0.4 }, camPos, camYaw, camPitch, w, h, fov);
-        const b = project({ x: i * 0.4, y: -1, z:  N * 0.4 }, camPos, camYaw, camPitch, w, h, fov);
+        const a = project({ x: i * 0.6, y: -1.2, z: -N * 0.6 }, camPos, camYaw, camPitch, w, h, fov);
+        const b = project({ x: i * 0.6, y: -1.2, z:  N * 0.6 }, camPos, camYaw, camPitch, w, h, fov);
         if (a && b) { ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke(); }
-        const c = project({ x: -N * 0.4, y: -1, z: i * 0.4 }, camPos, camYaw, camPitch, w, h, fov);
-        const d = project({ x:  N * 0.4, y: -1, z: i * 0.4 }, camPos, camYaw, camPitch, w, h, fov);
+        const c = project({ x: -N * 0.6, y: -1.2, z: i * 0.6 }, camPos, camYaw, camPitch, w, h, fov);
+        const d = project({ x:  N * 0.6, y: -1.2, z: i * 0.6 }, camPos, camYaw, camPitch, w, h, fov);
         if (c && d) { ctx.beginPath(); ctx.moveTo(c.x, c.y); ctx.lineTo(d.x, d.y); ctx.stroke(); }
       }
     }
@@ -211,19 +211,19 @@ export function CameraScene() {
       camPos: V3, camYaw: number, camPitch: number,
       fov: number,
     ) {
-      const o = project({ x: 0, y: -1, z: 0 }, camPos, camYaw, camPitch, w, h, fov);
-      const x = project({ x: 1, y: -1, z: 0 }, camPos, camYaw, camPitch, w, h, fov);
-      const y = project({ x: 0, y:  0, z: 0 }, camPos, camYaw, camPitch, w, h, fov);
-      const z = project({ x: 0, y: -1, z: 1 }, camPos, camYaw, camPitch, w, h, fov);
+      const o = project({ x: 0, y: -1.2, z: 0 }, camPos, camYaw, camPitch, w, h, fov);
+      const x = project({ x: 1.5, y: -1.2, z: 0 }, camPos, camYaw, camPitch, w, h, fov);
+      const y = project({ x: 0, y:  0.3, z: 0 }, camPos, camYaw, camPitch, w, h, fov);
+      const z = project({ x: 0, y: -1.2, z: 1.5 }, camPos, camYaw, camPitch, w, h, fov);
       const lines: [typeof o, typeof o, string][] = [
-        [o, x, "oklch(0.7 0.2 30)"],
-        [o, y, "oklch(0.78 0.2 140)"],
-        [o, z, "oklch(0.7 0.2 250)"],
+        [o, x, "oklch(0.72 0.22 30)"],
+        [o, y, "oklch(0.82 0.22 140)"],
+        [o, z, "oklch(0.72 0.22 250)"],
       ];
       lines.forEach(([a, b, col]) => {
         if (!a || !b) return;
         ctx.strokeStyle = col;
-        ctx.lineWidth = 1.5;
+        ctx.lineWidth = 2;
         ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
       });
     }
@@ -252,8 +252,8 @@ export function CameraScene() {
             });
           }
         }
-        ctx.strokeStyle = `color-mix(in oklab, ${col} 70%, transparent)`;
-        ctx.lineWidth = 1;
+        ctx.strokeStyle = `color-mix(in oklab, ${col} 90%, transparent)`;
+        ctx.lineWidth = 1.2;
         for (let i = 0; i <= LAT; i++) {
           for (let j = 0; j < LON; j++) {
             const a = project(verts[i * LON + j], camPos, camYaw, camPitch, w, h, fov);
@@ -269,8 +269,8 @@ export function CameraScene() {
       const edges = obj.type === "cube" ? cubeEdges : pyramidEdges;
       const world = local.map(v => ({ x: v.x + obj.pos.x, y: v.y + obj.pos.y, z: v.z + obj.pos.z }));
       const projected = world.map(v => project(v, camPos, camYaw, camPitch, w, h, fov));
-      ctx.strokeStyle = `color-mix(in oklab, ${col} 80%, transparent)`;
-      ctx.lineWidth = 1.4;
+      ctx.strokeStyle = `color-mix(in oklab, ${col} 95%, transparent)`;
+      ctx.lineWidth = 1.8;
       edges.forEach(([a, b]) => {
         const A = projected[a], B = projected[b];
         if (A && B) { ctx.beginPath(); ctx.moveTo(A.x, A.y); ctx.lineTo(B.x, B.y); ctx.stroke(); }
@@ -357,12 +357,12 @@ export function CameraScene() {
 
       // ===== SCENE VIEW =====
       // Fixed overview camera looking at origin from a stationary angle
-      const sCamPos: V3 = { x: 5.5, y: 3.5, z: 6.5 };
+      const sCamPos: V3 = { x: 4.2, y: 2.8, z: 5.0 };
       // Compute yaw/pitch toward origin
       const dir = sub({ x: 0, y: 0, z: 0 }, sCamPos);
       const sYaw = Math.atan2(dir.x, dir.z);
       const sPitch = Math.atan2(-dir.y, Math.hypot(dir.x, dir.z));
-      const sFov = (60 * Math.PI) / 180;
+      const sFov = (50 * Math.PI) / 180;
 
       sCtx.clearRect(0, 0, sceneSize.w, sceneSize.h);
       // background gradient
@@ -441,8 +441,11 @@ export function CameraScene() {
         <div className="pointer-events-none absolute top-3 left-3 text-[10px] uppercase tracking-[0.3em] text-muted-foreground/90">
           ◎ Scene View · Perspective
         </div>
-        <div className="pointer-events-none absolute top-3 right-3 text-[10px] uppercase tracking-[0.3em] text-primary/90">
+        <div className="pointer-events-none absolute top-3 right-3 text-[10px] uppercase tracking-[0.3em] text-primary/90 glass px-2 py-1 rounded-full">
           {hint}
+        </div>
+        <div className="pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 text-center text-[10px] uppercase tracking-[0.4em] text-foreground/40 opacity-0 hover:opacity-100 transition-opacity">
+          drag · scroll · explore
         </div>
         <div className="pointer-events-none absolute bottom-3 left-3 text-[10px] uppercase tracking-[0.3em] text-muted-foreground/80">
           X · Y · Z
