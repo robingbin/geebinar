@@ -252,8 +252,8 @@ export function CameraScene() {
             });
           }
         }
-        ctx.strokeStyle = `color-mix(in oklab, ${col} 70%, transparent)`;
-        ctx.lineWidth = 1;
+        ctx.strokeStyle = `color-mix(in oklab, ${col} 90%, transparent)`;
+        ctx.lineWidth = 1.2;
         for (let i = 0; i <= LAT; i++) {
           for (let j = 0; j < LON; j++) {
             const a = project(verts[i * LON + j], camPos, camYaw, camPitch, w, h, fov);
@@ -269,8 +269,8 @@ export function CameraScene() {
       const edges = obj.type === "cube" ? cubeEdges : pyramidEdges;
       const world = local.map(v => ({ x: v.x + obj.pos.x, y: v.y + obj.pos.y, z: v.z + obj.pos.z }));
       const projected = world.map(v => project(v, camPos, camYaw, camPitch, w, h, fov));
-      ctx.strokeStyle = `color-mix(in oklab, ${col} 80%, transparent)`;
-      ctx.lineWidth = 1.4;
+      ctx.strokeStyle = `color-mix(in oklab, ${col} 95%, transparent)`;
+      ctx.lineWidth = 1.8;
       edges.forEach(([a, b]) => {
         const A = projected[a], B = projected[b];
         if (A && B) { ctx.beginPath(); ctx.moveTo(A.x, A.y); ctx.lineTo(B.x, B.y); ctx.stroke(); }
@@ -441,8 +441,11 @@ export function CameraScene() {
         <div className="pointer-events-none absolute top-3 left-3 text-[10px] uppercase tracking-[0.3em] text-muted-foreground/90">
           ◎ Scene View · Perspective
         </div>
-        <div className="pointer-events-none absolute top-3 right-3 text-[10px] uppercase tracking-[0.3em] text-primary/90">
+        <div className="pointer-events-none absolute top-3 right-3 text-[10px] uppercase tracking-[0.3em] text-primary/90 glass px-2 py-1 rounded-full">
           {hint}
+        </div>
+        <div className="pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 text-center text-[10px] uppercase tracking-[0.4em] text-foreground/40 opacity-0 hover:opacity-100 transition-opacity">
+          drag · scroll · explore
         </div>
         <div className="pointer-events-none absolute bottom-3 left-3 text-[10px] uppercase tracking-[0.3em] text-muted-foreground/80">
           X · Y · Z
