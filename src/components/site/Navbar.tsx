@@ -66,7 +66,7 @@ export function Navbar() {
             href="#contact"
             className="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-medium text-foreground border border-primary/40 hover:border-primary hover:bg-primary/10 px-4 py-2 rounded-full transition-all backdrop-blur-md"
           >
-            Hire Me
+            Let's Talk
           </a>
         </div>
         <div className="md:hidden flex items-center gap-2">
