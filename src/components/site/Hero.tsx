@@ -1,4 +1,4 @@
-import { InteractiveMesh } from "./InteractiveMesh";
+import { CameraScene } from "./CameraScene";
 
 export function Hero() {
   const title = "GEEBIN A R";
@@ -73,7 +73,7 @@ export function Hero() {
       <div className="relative mx-auto max-w-6xl w-full flex flex-col items-center text-center gap-8">
         <div className="inline-flex items-center gap-2 glass px-4 py-1.5 rounded-full text-[10px] tracking-[0.35em] uppercase text-muted-foreground animate-fade-in">
           <span className="w-1.5 h-1.5 rounded-full bg-primary animate-glow-pulse" />
-          Portfolio Reel · 2026
+          Portfolio
         </div>
 
         <h1 className="font-display leading-[0.85] tracking-tight text-foreground">
@@ -126,12 +126,12 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Interactive 3D mesh — Spline-style */}
+      {/* 3D Camera workspace — scene + camera view */}
       <div
         className="relative mx-auto max-w-6xl w-full mt-16 sm:mt-20 animate-fade-up"
         style={{ animationDelay: "1.8s" }}
       >
-        <InteractiveMesh />
+        <CameraScene />
       </div>
 
       {/* Stats strip */}
