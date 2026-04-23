@@ -6,7 +6,7 @@ export function Footer() {
           GEEBIN<span className="text-primary"> </span>A R
         </div>
         <div className="text-xs uppercase tracking-[0.3em] text-muted-foreground text-center">
-          © {new Date().getFullYear()} · Crafting Cinematic Reality
+          © {new Date().getFullYear()} · Portfolio
         </div>
         <div className="flex items-center gap-4 text-xs uppercase tracking-[0.3em] text-muted-foreground">
           <a href="#top" className="hover:text-primary transition-colors">↑ Back to top</a>
