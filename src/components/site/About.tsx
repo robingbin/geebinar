@@ -184,27 +184,22 @@ export function About() {
           <div className="text-center text-[10px] tracking-[0.45em] uppercase text-accent mb-10">
             Experience
           </div>
-          <div className="max-w-2xl mx-auto flex flex-col gap-10 sm:gap-12 py-4">
+          <div className="max-w-xl mx-auto flex flex-col items-center gap-10 sm:gap-12 py-4">
             {experience.map((e, i) => (
               <div
                 key={e.period}
-                className="grid grid-cols-[110px_auto_1fr] sm:grid-cols-[150px_auto_1fr] items-start gap-4 sm:gap-6 group"
+                className="flex flex-col items-center text-center gap-3 group"
                 style={{ transitionDelay: `${i * 80}ms` }}
               >
-                <div className="font-mono text-[10px] sm:text-xs tracking-[0.25em] text-primary/80 pt-1.5 whitespace-nowrap">
+                <div className="font-mono text-[10px] sm:text-xs tracking-[0.3em] text-primary/80">
                   {e.period}
                 </div>
-                <div className="flex flex-col items-center pt-2">
-                  <span className="w-2 h-2 rounded-full bg-primary group-hover:scale-150 transition-transform duration-500" />
-                  <span className="w-px flex-1 bg-border/60 mt-2" />
+                <span className="w-2 h-2 rounded-full bg-primary group-hover:scale-150 transition-transform duration-500" />
+                <div className="text-foreground font-semibold text-base sm:text-lg leading-tight">
+                  {e.role}
                 </div>
-                <div>
-                  <div className="text-foreground font-semibold text-base sm:text-lg leading-tight">
-                    {e.role}
-                  </div>
-                  <div className="text-sm text-muted-foreground mt-1">
-                    {e.place}
-                  </div>
+                <div className="text-sm text-muted-foreground">
+                  {e.place}
                 </div>
               </div>
             ))}

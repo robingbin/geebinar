@@ -71,7 +71,7 @@ export function Hero() {
       <div className="relative mx-auto max-w-6xl w-full flex flex-col items-center text-center gap-8">
         <div className="inline-flex items-center gap-2 glass px-4 py-1.5 rounded-full text-[10px] tracking-[0.35em] uppercase text-muted-foreground animate-fade-in">
           <span className="w-1.5 h-1.5 rounded-full bg-primary animate-glow-pulse" />
-          Portfolio
+          PORTFOLIO 2026
         </div>
 
         <h1 className="font-display leading-[0.85] tracking-tight text-foreground">
