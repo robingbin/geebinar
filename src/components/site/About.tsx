@@ -14,7 +14,7 @@ const disciplines = [
   },
   {
     title: "Video Editing",
-    sub: "Adobe Premiere · DaVinci Resolve",
+    sub: "Adobe Premier · DaVinci Resolve",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
         <rect x="2" y="4" width="20" height="16" rx="2" />
@@ -28,8 +28,8 @@ const disciplines = [
     ),
   },
   {
-    title: "Tracking",
-    sub: "2D/3D Matchmove · Stabilization",
+    title: "2D/3D Tracking",
+    sub: "3D Equalizer · Mocha",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
         <circle cx="12" cy="12" r="9" />
@@ -43,7 +43,7 @@ const disciplines = [
   },
   {
     title: "CG Integration",
-    sub: "HDRI Lighting · Shadow Pass",
+    sub: "Nuke · Unreal Engine",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
         <rect x="2" y="3" width="20" height="14" rx="2" />
@@ -53,17 +53,19 @@ const disciplines = [
     ),
   },
   {
-    title: "Particle FX",
-    sub: "Debris · Atmosphere · Volumetrics",
+    title: "Poster Design",
+    sub: "Photoshop · Illustrator",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-        <path d="M12 2l2 5 5 .5-3.8 3.4 1.2 5L12 13.5 7.6 15.9l1.2-5L5 7.5 10 7l2-5z" />
+        <path d="M12 3l1.6 3.6L17 8l-2.6 2.4.8 3.6L12 12l-3.2 2 .8-3.6L7 8l3.4-1.4L12 3z" />
+        <path d="M19 4l.6 1.4L21 6l-1.4.6L19 8l-.6-1.4L17 6l1.4-.6L19 4z" />
+        <path d="M5 15l.6 1.4L7 17l-1.4.6L5 19l-.6-1.4L3 17l1.4-.6L5 15z" />
       </svg>
     ),
   },
   {
-    title: "Color Science",
-    sub: "ACES · DaVinci Resolve",
+    title: "Color Correction",
+    sub: "DaVinci Resolve",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
         <circle cx="12" cy="12" r="9" />
