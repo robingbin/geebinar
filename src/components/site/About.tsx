@@ -80,17 +80,17 @@ const disciplines = [
 
 const experience = [
   {
-    period: "2025 — Present",
-    role: "VFX Compositor",
-    place: "Freelance — VFX Artist & Video Editor",
+    period: "2025 — PRESENT",
+    role: "VFX Compositor & Video Editor",
+    place: "Freelance",
   },
   {
-    period: "2023 — 2025",
+    period: "2022 — 2025",
     role: "Junior VFX Compositor",
     place: "AJAX VFX, Chennai",
   },
   {
-    period: "2022 — 2023",
+    period: "2021 — 2022",
     role: "VFX Intern",
     place: "Maac Studio, Chennai",
   },
@@ -180,26 +180,25 @@ export function About() {
         </div>
 
         {/* Experience timeline */}
-        <div className="mt-24 reveal">
+        <div className="mt-32 reveal">
           <div className="text-center text-[10px] tracking-[0.45em] uppercase text-accent mb-10">
             Experience
           </div>
-          <div className="max-w-2xl mx-auto space-y-1">
+          <div className="max-w-md mx-auto flex flex-col items-center gap-16 sm:gap-20 py-8">
             {experience.map((e, i) => (
               <div
                 key={e.period}
-                className="grid grid-cols-[120px_1fr] sm:grid-cols-[160px_24px_1fr] gap-4 sm:gap-6 items-start py-5 border-b border-border last:border-b-0"
-                style={{ transitionDelay: `${i * 60}ms` }}
+                className="text-center group"
+                style={{ transitionDelay: `${i * 80}ms` }}
               >
-                <div className="text-[10px] tracking-[0.3em] uppercase text-primary/80 pt-1">
+                <div className="font-mono text-sm sm:text-base tracking-[0.35em] text-primary/90 group-hover:text-primary transition-colors">
                   {e.period}
                 </div>
-                <div className="hidden sm:flex justify-center pt-2">
-                  <span className="w-2.5 h-2.5 rounded-full bg-primary animate-glow-pulse" />
+                <div className="mt-3 text-foreground font-medium text-sm sm:text-base opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  {e.role}
                 </div>
-                <div>
-                  <div className="text-foreground font-medium">{e.role}</div>
-                  <div className="text-sm text-muted-foreground mt-1">{e.place}</div>
+                <div className="text-xs text-muted-foreground mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  {e.place}
                 </div>
               </div>
             ))}
