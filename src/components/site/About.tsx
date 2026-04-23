@@ -81,8 +81,8 @@ const disciplines = [
 const experience = [
   {
     period: "2025 — PRESENT",
-    role: "VFX Compositor & Video Editor",
-    place: "Freelance",
+    role: "VFX Compositor",
+    place: "Freelance — VFX Artist & Video Editor",
   },
   {
     period: "2022 — 2025",
@@ -184,21 +184,27 @@ export function About() {
           <div className="text-center text-[10px] tracking-[0.45em] uppercase text-accent mb-10">
             Experience
           </div>
-          <div className="max-w-md mx-auto flex flex-col items-center gap-16 sm:gap-20 py-8">
+          <div className="max-w-2xl mx-auto flex flex-col gap-10 sm:gap-12 py-4">
             {experience.map((e, i) => (
               <div
                 key={e.period}
-                className="text-center group"
+                className="grid grid-cols-[110px_auto_1fr] sm:grid-cols-[150px_auto_1fr] items-start gap-4 sm:gap-6 group"
                 style={{ transitionDelay: `${i * 80}ms` }}
               >
-                <div className="font-mono text-sm sm:text-base tracking-[0.35em] text-primary/90 group-hover:text-primary transition-colors">
+                <div className="font-mono text-[10px] sm:text-xs tracking-[0.25em] text-primary/80 pt-1.5 whitespace-nowrap">
                   {e.period}
                 </div>
-                <div className="mt-3 text-foreground font-medium text-sm sm:text-base opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  {e.role}
+                <div className="flex flex-col items-center pt-2">
+                  <span className="w-2 h-2 rounded-full bg-primary group-hover:scale-150 transition-transform duration-500" />
+                  <span className="w-px flex-1 bg-border/60 mt-2" />
                 </div>
-                <div className="text-xs text-muted-foreground mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  {e.place}
+                <div>
+                  <div className="text-foreground font-semibold text-base sm:text-lg leading-tight">
+                    {e.role}
+                  </div>
+                  <div className="text-sm text-muted-foreground mt-1">
+                    {e.place}
+                  </div>
                 </div>
               </div>
             ))}
