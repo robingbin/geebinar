@@ -127,7 +127,7 @@ export function Hero() {
       </div>
 
       {/* Stats strip */}
-      <div className="relative mx-auto max-w-7xl w-full mt-24 sm:mt-28 pt-8 border-t border-border grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
+      <div className="relative z-10 mx-auto max-w-7xl w-full mt-24 sm:mt-28 pt-8 border-t border-border grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
         {[
           { k: "16+", v: "Feature Films" },
           { k: "120+", v: "VFX Shots" },
@@ -148,7 +148,7 @@ export function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 text-muted-foreground">
+      <div className="absolute z-10 bottom-6 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 text-muted-foreground">
         <span className="text-[10px] uppercase tracking-[0.4em]">Scroll</span>
         <div className="w-px h-12 bg-gradient-to-b from-primary to-transparent animate-glow-pulse" />
       </div>
