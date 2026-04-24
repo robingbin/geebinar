@@ -41,33 +41,34 @@ export function Hero() {
         />
       </div>
 
-      {/* 3D feature objects layer — sits ABOVE background/particles, BELOW text */}
+      {/* 3D feature objects layer — placed in corner/edge empty zones only */}
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
-        {/* Floating glow orbs */}
+        {/* Floating glow orbs — pushed to far corners, away from centered text */}
         <div
-          className="absolute top-[12%] left-[6%] w-80 h-80 rounded-full blur-3xl opacity-50 animate-float"
+          className="absolute -top-20 -left-20 w-80 h-80 rounded-full blur-3xl opacity-50 animate-float"
           style={{ background: "radial-gradient(circle, var(--primary), transparent 70%)" }}
         />
         <div
-          className="absolute bottom-[18%] right-[4%] w-[28rem] h-[28rem] rounded-full blur-3xl opacity-40 animate-float-slow"
+          className="absolute -bottom-32 -right-32 w-[32rem] h-[32rem] rounded-full blur-3xl opacity-40 animate-float-slow"
           style={{ background: "radial-gradient(circle, var(--accent), transparent 70%)", animationDelay: "1.5s" }}
         />
         <div
-          className="absolute top-[55%] left-[42%] w-72 h-72 rounded-full blur-3xl opacity-30 animate-float"
+          className="absolute top-[60%] -left-40 w-80 h-80 rounded-full blur-3xl opacity-30 animate-float"
           style={{
             background: "radial-gradient(circle, oklch(0.62 0.18 30 / 0.55), transparent 70%)",
             animationDelay: "0.8s",
           }}
         />
 
-        {/* Floating 3D cubes (CSS) */}
-        <FloatingCube className="absolute top-[18%] right-[12%] w-24 h-24 animate-float" />
-        <FloatingCube className="absolute bottom-[22%] left-[8%] w-20 h-20 animate-float-slow" delay="1.2s" />
-        <FloatingCube className="absolute top-[42%] right-[28%] w-14 h-14 animate-float" delay="2s" />
+        {/* Floating 3D cubes — only in left/right edge gutters, never under headline */}
+        <FloatingCube className="absolute top-[14%] left-[3%] w-20 h-20 animate-float" />
+        <FloatingCube className="absolute top-[16%] right-[4%] w-24 h-24 animate-float-slow" delay="1.2s" />
+        <FloatingCube className="absolute bottom-[28%] left-[5%] w-16 h-16 animate-float" delay="2s" />
+        <FloatingCube className="absolute bottom-[30%] right-[6%] w-14 h-14 animate-float-slow" delay="2.6s" />
 
-        {/* Big rotating ring (orbit) */}
-        <div className="absolute -right-40 top-1/4 w-[40rem] h-[40rem] rounded-full border border-primary/20 animate-spin-slow" />
-        <div className="absolute -right-20 top-1/3 w-[28rem] h-[28rem] rounded-full border border-accent/20 animate-spin-slower" />
+        {/* Big rotating rings — anchored off-canvas right, away from centered text */}
+        <div className="absolute -right-72 top-1/4 w-[40rem] h-[40rem] rounded-full border border-primary/20 animate-spin-slow" />
+        <div className="absolute -left-72 top-1/3 w-[32rem] h-[32rem] rounded-full border border-accent/20 animate-spin-slower" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-6xl w-full flex flex-col items-center text-center gap-8">
