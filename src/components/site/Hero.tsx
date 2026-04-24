@@ -6,7 +6,7 @@ export function Hero() {
       className="relative min-h-screen flex flex-col justify-center pt-32 pb-20 px-6 overflow-hidden"
       style={{ background: "var(--gradient-hero)" }}
     >
-      {/* 3D atmospheric backdrop */}
+      {/* Static background layer (grid, scanlines, film strip) */}
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
         {/* Perspective grid floor */}
         <div
@@ -20,6 +20,29 @@ export function Hero() {
             WebkitMaskImage: "linear-gradient(to top, black 10%, transparent 80%)",
           }}
         />
+        {/* Film strip */}
+        <div
+          className="absolute -left-10 top-1/4 w-32 h-[120%] opacity-[0.12]"
+          style={{
+            backgroundImage:
+              "repeating-linear-gradient(0deg, var(--foreground) 0 6px, transparent 6px 28px)",
+            transform: "rotate(-12deg)",
+            maskImage: "radial-gradient(ellipse at center, black, transparent 70%)",
+            WebkitMaskImage: "radial-gradient(ellipse at center, black, transparent 70%)",
+          }}
+        />
+        {/* Scanlines */}
+        <div
+          className="absolute inset-0 opacity-[0.04] mix-blend-overlay"
+          style={{
+            backgroundImage:
+              "repeating-linear-gradient(0deg, var(--foreground) 0 1px, transparent 1px 4px)",
+          }}
+        />
+      </div>
+
+      {/* 3D feature objects layer — sits ABOVE background/particles, BELOW text */}
+      <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
         {/* Floating glow orbs */}
         <div
           className="absolute top-[12%] left-[6%] w-80 h-80 rounded-full blur-3xl opacity-50 animate-float"
@@ -45,30 +68,9 @@ export function Hero() {
         {/* Big rotating ring (orbit) */}
         <div className="absolute -right-40 top-1/4 w-[40rem] h-[40rem] rounded-full border border-primary/20 animate-spin-slow" />
         <div className="absolute -right-20 top-1/3 w-[28rem] h-[28rem] rounded-full border border-accent/20 animate-spin-slower" />
-
-        {/* Film strip */}
-        <div
-          className="absolute -left-10 top-1/4 w-32 h-[120%] opacity-[0.12]"
-          style={{
-            backgroundImage:
-              "repeating-linear-gradient(0deg, var(--foreground) 0 6px, transparent 6px 28px)",
-            transform: "rotate(-12deg)",
-            maskImage: "radial-gradient(ellipse at center, black, transparent 70%)",
-            WebkitMaskImage: "radial-gradient(ellipse at center, black, transparent 70%)",
-          }}
-        />
-
-        {/* Scanlines */}
-        <div
-          className="absolute inset-0 opacity-[0.04] mix-blend-overlay"
-          style={{
-            backgroundImage:
-              "repeating-linear-gradient(0deg, var(--foreground) 0 1px, transparent 1px 4px)",
-          }}
-        />
       </div>
 
-      <div className="relative mx-auto max-w-6xl w-full flex flex-col items-center text-center gap-8">
+      <div className="relative z-10 mx-auto max-w-6xl w-full flex flex-col items-center text-center gap-8">
         <div className="inline-flex items-center gap-2 glass px-4 py-1.5 rounded-full text-[10px] tracking-[0.35em] uppercase text-muted-foreground animate-fade-in">
           <span className="w-1.5 h-1.5 rounded-full bg-primary animate-glow-pulse" />
           PORTFOLIO 2026
@@ -125,7 +127,7 @@ export function Hero() {
       </div>
 
       {/* Stats strip */}
-      <div className="relative mx-auto max-w-7xl w-full mt-24 sm:mt-28 pt-8 border-t border-border grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
+      <div className="relative z-10 mx-auto max-w-7xl w-full mt-24 sm:mt-28 pt-8 border-t border-border grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
         {[
           { k: "16+", v: "Feature Films" },
           { k: "120+", v: "VFX Shots" },
@@ -146,7 +148,7 @@ export function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 text-muted-foreground">
+      <div className="absolute z-10 bottom-6 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 text-muted-foreground">
         <span className="text-[10px] uppercase tracking-[0.4em]">Scroll</span>
         <div className="w-px h-12 bg-gradient-to-b from-primary to-transparent animate-glow-pulse" />
       </div>
