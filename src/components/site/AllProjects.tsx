@@ -19,7 +19,7 @@ import gugan from "@/assets/film-gugan.jpg";
 
 type Project = {
   title: string;
-  category: "Film" | "Series";
+  category: "Film" | "Series" | "Short Film";
   year: string;
   date: string;
   poster: string;
@@ -29,7 +29,7 @@ const projects: Project[] = ([
   { title: "Local Times", category: "Series", year: "2026", date: "2026-01-15", poster: localtimes },
   { title: "Alappuzha Gymkhana", category: "Film", year: "2025", date: "2025-04-10", poster: gymkhana },
   { title: "Jenma Natchathiram", category: "Film", year: "2025", date: "2025-03-15", poster: jenma },
-  { title: "Gugan", category: "Film", year: "2025", date: "2025-02-20", poster: gugan },
+  { title: "Gugan", category: "Short Film", year: "2025", date: "2025-02-20", poster: gugan },
   { title: "Arjun Son of Vyjayanthi", category: "Film", year: "2025", date: "2025-04-17", poster: arjun },
   { title: "Padaiyanda Maaveeraa", category: "Film", year: "2025", date: "2025-11-01", poster: padaiyanda },
   { title: "Idly Kadai", category: "Film", year: "2025", date: "2025-10-01", poster: idly },
