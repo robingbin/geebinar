@@ -78,9 +78,15 @@ export function Reels() {
           href="https://www.instagram.com/robin_gbin/"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-sm uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors"
+          className="group relative inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm uppercase tracking-widest font-medium text-primary-foreground bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] hover:bg-[position:right_center] transition-all duration-500 glow-amber shadow-lg hover:scale-105"
         >
-          Follow @robin_gbin on Instagram →
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+          </svg>
+          Follow @robin_gbin on Instagram
+          <span className="group-hover:translate-x-1 transition-transform">→</span>
         </a>
       </div>
 
