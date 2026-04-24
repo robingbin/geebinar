@@ -12,10 +12,14 @@ import ui from "@/assets/film-ui.jpg";
 import chutney from "@/assets/film-chutney.jpg";
 import padaiyanda from "@/assets/film-padaiyanda.jpg";
 import localtimes from "@/assets/film-localtimes.png";
+import kondal from "@/assets/film-kondal.jpg";
+import gymkhana from "@/assets/film-gymkhana.jpg";
+import jenma from "@/assets/film-jenma.jpg";
+import gugan from "@/assets/film-gugan.jpg";
 
 type Project = {
   title: string;
-  category: "Film" | "Series";
+  category: "Film" | "Series" | "Short Film";
   year: string;
   date: string;
   poster: string;
@@ -23,6 +27,9 @@ type Project = {
 
 const projects: Project[] = ([
   { title: "Local Times", category: "Series", year: "2026", date: "2026-01-15", poster: localtimes },
+  { title: "Alappuzha Gymkhana", category: "Film", year: "2025", date: "2025-04-10", poster: gymkhana },
+  { title: "Jenma Natchathiram", category: "Film", year: "2025", date: "2025-03-15", poster: jenma },
+  { title: "Gugan", category: "Short Film", year: "2025", date: "2025-02-20", poster: gugan },
   { title: "Arjun Son of Vyjayanthi", category: "Film", year: "2025", date: "2025-04-17", poster: arjun },
   { title: "Padaiyanda Maaveeraa", category: "Film", year: "2025", date: "2025-11-01", poster: padaiyanda },
   { title: "Idly Kadai", category: "Film", year: "2025", date: "2025-10-01", poster: idly },
@@ -35,6 +42,7 @@ const projects: Project[] = ([
   { title: "Raayan", category: "Film", year: "2024", date: "2024-07-26", poster: raayan },
   { title: "Indian 2", category: "Film", year: "2024", date: "2024-07-12", poster: indian2 },
   { title: "PT Sir", category: "Film", year: "2024", date: "2024-05-10", poster: ptsir },
+  { title: "Kondal", category: "Film", year: "2024", date: "2024-09-05", poster: kondal },
 ] as Project[]).sort((a, b) => (a.date < b.date ? 1 : -1));
 
 export function AllProjects() {

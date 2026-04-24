@@ -1,6 +1,8 @@
 import { useEffect, useRef } from "react";
 
 const reels = [
+  "DXbzpLxjdek",
+  "DXWooq6gWRc",
   "DUBG437kZJf",
   "DW1Qt78k2lj",
   "DXCBwguErFx",

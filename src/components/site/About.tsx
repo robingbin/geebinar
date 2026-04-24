@@ -192,7 +192,7 @@ export function About() {
                 style={{ transitionDelay: `${i * 80}ms` }}
               >
                 <div className="font-mono text-[10px] sm:text-xs tracking-[0.25em] text-primary/80 pt-1.5 text-right whitespace-nowrap">
-                  {e.period.replace(" — ", "–").replace("PRESENT", "Present")}
+                  {e.period.replace(" — ", "–").replace("PRESENT", "NOW")}
                 </div>
                 <div className="flex justify-center pt-2">
                   <span className="w-2 h-2 rounded-full bg-primary group-hover:scale-150 transition-transform duration-500" />
