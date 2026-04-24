@@ -60,13 +60,7 @@ export function Hero() {
           }}
         />
 
-        {/* Floating 3D cubes — only in left/right edge gutters, never under headline */}
-        <FloatingCube className="absolute top-[14%] left-[3%] w-20 h-20 animate-float" />
-        <FloatingCube className="absolute top-[16%] right-[4%] w-24 h-24 animate-float-slow" delay="1.2s" />
-        <FloatingCube className="absolute bottom-[28%] left-[5%] w-16 h-16 animate-float" delay="2s" />
-        <FloatingCube className="absolute bottom-[30%] right-[6%] w-14 h-14 animate-float-slow" delay="2.6s" />
-
-        {/* Big rotating rings — anchored off-canvas right, away from centered text */}
+        {/* Big rotating rings — anchored off-canvas, away from centered text */}
         <div className="absolute -right-72 top-1/4 w-[40rem] h-[40rem] rounded-full border border-primary/20 animate-spin-slow" />
         <div className="absolute -left-72 top-1/3 w-[32rem] h-[32rem] rounded-full border border-accent/20 animate-spin-slower" />
       </div>
