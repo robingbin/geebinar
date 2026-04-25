@@ -79,7 +79,7 @@ export function Hero() {
             <img
               src={logoGeebin}
               alt="Geebin A R logo"
-              className="relative w-24 h-24 sm:w-28 sm:h-28 object-contain animate-tilt-3d drop-shadow-[0_0_20px_oklch(0.7_0.18_50/0.6)]"
+              className="relative w-24 h-24 sm:w-28 sm:h-28 object-contain animate-logo-hue"
             />
           </div>
           <div className="inline-flex items-center gap-2 glass px-4 py-1.5 rounded-full text-[10px] tracking-[0.35em] uppercase text-muted-foreground">
@@ -101,7 +101,7 @@ export function Hero() {
             ))}
           </span>
           <span
-            className="block mt-3 text-xl sm:text-2xl md:text-3xl tracking-[0.4em] text-light-sweep animate-fade-up"
+            className="block mt-3 text-xl sm:text-2xl md:text-3xl tracking-[0.4em] text-shimmer animate-fade-up"
             style={{ animationDelay: "1.2s" }}
           >
             {"VFX COMPOSITOR \u00B7 VIDEO EDITOR"}
