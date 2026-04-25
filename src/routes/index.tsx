@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CursorGlow } from "@/components/site/CursorGlow";
 import { Navbar } from "@/components/site/Navbar";
+import { LoadingScreen } from "@/components/site/LoadingScreen";
 import { Particles } from "@/components/site/Particles";
 import { Hero } from "@/components/site/Hero";
 import { Showreel } from "@/components/site/Showreel";
@@ -133,6 +134,7 @@ function Index() {
       </div>
 
       <CursorGlow />
+      <LoadingScreen />
       <Particles />
       <Navbar />
       <main>
