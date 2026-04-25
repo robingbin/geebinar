@@ -101,7 +101,7 @@ export function Hero() {
             ))}
           </span>
           <span
-            className="block mt-3 text-xl sm:text-2xl md:text-3xl tracking-[0.4em] text-shimmer animate-fade-up"
+            className="block mt-3 text-xl sm:text-2xl md:text-3xl tracking-[0.4em] text-light-sweep animate-fade-up"
             style={{ animationDelay: "1.2s" }}
           >
             {"VFX COMPOSITOR \u00B7 VIDEO EDITOR"}

@@ -288,6 +288,32 @@
   0%, 100% { transform: perspective(1000px) rotateX(0deg) rotateY(0deg); }
   50% { transform: perspective(1000px) rotateX(2deg) rotateY(-3deg); }
 }
+@keyframes light-sweep {
+  0% { background-position: -200% 50%; }
+  60% { background-position: 200% 50%; }
+  100% { background-position: 200% 50%; }
+}
+@keyframes loader-bar {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+@keyframes loader-out {
+  0% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(1.05); visibility: hidden; }
+}
+@keyframes curtain-up {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-100%); }
+}
+@keyframes curtain-down {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(100%); }
+}
+@keyframes logo-zoom-in {
+  0% { opacity: 0; transform: scale(0.6) rotateY(-30deg); filter: blur(20px); }
+  60% { opacity: 1; transform: scale(1.05) rotateY(0deg); filter: blur(0); }
+  100% { opacity: 1; transform: scale(1) rotateY(0deg); filter: blur(0); }
+}
 
 .animate-fade-up { animation: fade-up 0.9s var(--transition-cinematic) both; }
 .animate-fade-in { animation: fade-in 1.2s ease-out both; }
@@ -301,6 +327,29 @@
 .animate-spin-slow { animation: spin-slow 60s linear infinite; }
 .animate-spin-slower { animation: spin-slow 120s linear infinite reverse; }
 .animate-tilt-3d { animation: tilt-3d 12s ease-in-out infinite; transform-style: preserve-3d; }
+.animate-light-sweep { animation: light-sweep 4s ease-in-out infinite; }
+.animate-loader-bar { animation: loader-bar 1.4s cubic-bezier(0.65, 0, 0.35, 1) infinite; }
+.animate-curtain-up { animation: curtain-up 1s cubic-bezier(0.85, 0, 0.15, 1) forwards; }
+.animate-curtain-down { animation: curtain-down 1s cubic-bezier(0.85, 0, 0.15, 1) forwards; }
+.animate-logo-zoom-in { animation: logo-zoom-in 1.2s var(--transition-cinematic) both; }
+
+.text-light-sweep {
+  background: linear-gradient(
+    100deg,
+    var(--foreground) 0%,
+    var(--foreground) 35%,
+    oklch(1 0 0) 48%,
+    var(--primary) 50%,
+    oklch(1 0 0) 52%,
+    var(--foreground) 65%,
+    var(--foreground) 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: light-sweep 5s ease-in-out infinite;
+}
 
 .text-shimmer {
   background: linear-gradient(90deg, var(--foreground) 0%, var(--primary) 25%, var(--accent) 50%, var(--primary) 75%, var(--foreground) 100%);
