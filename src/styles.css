@@ -314,6 +314,13 @@
   60% { opacity: 1; transform: scale(1.05) rotateY(0deg); filter: blur(0); }
   100% { opacity: 1; transform: scale(1) rotateY(0deg); filter: blur(0); }
 }
+@keyframes logo-hue {
+  0%   { filter: hue-rotate(0deg) saturate(1.2) drop-shadow(0 0 16px oklch(0.78 0.16 65 / 0.7)); }
+  25%  { filter: hue-rotate(80deg) saturate(1.4) drop-shadow(0 0 22px oklch(0.78 0.16 145 / 0.75)); }
+  50%  { filter: hue-rotate(180deg) saturate(1.5) drop-shadow(0 0 26px oklch(0.7 0.16 245 / 0.75)); }
+  75%  { filter: hue-rotate(280deg) saturate(1.4) drop-shadow(0 0 22px oklch(0.7 0.16 345 / 0.75)); }
+  100% { filter: hue-rotate(360deg) saturate(1.2) drop-shadow(0 0 16px oklch(0.78 0.16 65 / 0.7)); }
+}
 
 .animate-fade-up { animation: fade-up 0.9s var(--transition-cinematic) both; }
 .animate-fade-in { animation: fade-in 1.2s ease-out both; }
@@ -332,6 +339,7 @@
 .animate-curtain-up { animation: curtain-up 1s cubic-bezier(0.85, 0, 0.15, 1) forwards; }
 .animate-curtain-down { animation: curtain-down 1s cubic-bezier(0.85, 0, 0.15, 1) forwards; }
 .animate-logo-zoom-in { animation: logo-zoom-in 1.2s var(--transition-cinematic) both; }
+.animate-logo-hue { animation: logo-hue 8s linear infinite; }
 
 .text-light-sweep {
   background: linear-gradient(

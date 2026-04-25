@@ -2,10 +2,12 @@ import { useEffect, useState } from "react";
 import logoGeebin from "@/assets/logo-geebin.png";
 
 export function LoadingScreen() {
+  const [mounted, setMounted] = useState(false);
   const [hidden, setHidden] = useState(false);
   const [leaving, setLeaving] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     // Hold the loader for ~2.2s, then play the curtain exit
     const leaveTimer = setTimeout(() => setLeaving(true), 2200);
     const hideTimer = setTimeout(() => setHidden(true), 3300);
@@ -19,7 +21,7 @@ export function LoadingScreen() {
     };
   }, []);
 
-  if (hidden) return null;
+  if (!mounted || hidden) return null;
 
   return (
     <div
