@@ -8,9 +8,9 @@ export function Footer() {
           <img
             src={logoGeebin}
             alt="Geebin A R logo"
-            className="w-10 h-10 object-contain animate-spin-slow drop-shadow-[0_0_14px_oklch(0.7_0.18_50/0.55)]"
+            className="w-10 h-10 object-contain animate-tilt-3d drop-shadow-[0_0_14px_oklch(0.7_0.18_50/0.55)]"
           />
-          GEEBIN<span className="text-primary"> </span>A R
+          <span>GEEBIN<span className="text-primary mx-1">·</span>A R</span>
         </div>
         <div className="text-xs uppercase tracking-[0.3em] text-muted-foreground text-center">
           © {new Date().getFullYear()} · Portfolio

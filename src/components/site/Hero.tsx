@@ -79,7 +79,7 @@ export function Hero() {
             <img
               src={logoGeebin}
               alt="Geebin A R logo"
-              className="relative w-24 h-24 sm:w-28 sm:h-28 object-contain animate-spin-slow drop-shadow-[0_0_20px_oklch(0.7_0.18_50/0.6)]"
+              className="relative w-24 h-24 sm:w-28 sm:h-28 object-contain animate-tilt-3d drop-shadow-[0_0_20px_oklch(0.7_0.18_50/0.6)]"
             />
           </div>
           <div className="inline-flex items-center gap-2 glass px-4 py-1.5 rounded-full text-[10px] tracking-[0.35em] uppercase text-muted-foreground">
@@ -90,12 +90,6 @@ export function Hero() {
 
         <h1 className="font-display leading-[0.85] tracking-tight text-foreground">
           <span className="block text-[3.2rem] sm:text-7xl md:text-8xl lg:text-[10rem] char-stagger inline-flex items-center justify-center gap-4 sm:gap-6 flex-wrap">
-            <img
-              src={logoGeebin}
-              alt=""
-              aria-hidden="true"
-              className="hidden sm:inline-block w-16 md:w-20 lg:w-28 h-16 md:h-20 lg:h-28 object-contain animate-spin-slower drop-shadow-[0_0_18px_oklch(0.7_0.18_50/0.55)]"
-            />
             {title.split("").map((c, i) => (
               <span
                 key={i}
