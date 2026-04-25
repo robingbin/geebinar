@@ -44,9 +44,9 @@ export function Navbar() {
           <img
             src={logoGeebin}
             alt="Geebin A R logo"
-            className="w-9 h-9 object-contain animate-spin-slow drop-shadow-[0_0_12px_oklch(0.7_0.18_50/0.5)] group-hover:scale-110 transition-transform"
+            className="w-9 h-9 object-contain animate-tilt-3d drop-shadow-[0_0_12px_oklch(0.7_0.18_50/0.5)] group-hover:scale-110 transition-transform"
           />
-          GEEBIN<span className="text-primary"> </span>A R
+          <span>GEEBIN<span className="text-primary mx-1">·</span>A R</span>
         </a>
         {/* Center pill nav with strong blur */}
         <nav
