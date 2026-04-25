@@ -1,3 +1,5 @@
+import logoGeebin from "@/assets/logo-geebin.png";
+
 export function Hero() {
   const title = "GEEBIN A R";
   return (
@@ -66,13 +68,34 @@ export function Hero() {
       </div>
 
       <div className="relative z-10 mx-auto max-w-6xl w-full flex flex-col items-center text-center gap-8">
-        <div className="inline-flex items-center gap-2 glass px-4 py-1.5 rounded-full text-[10px] tracking-[0.35em] uppercase text-muted-foreground animate-fade-in">
-          <span className="w-1.5 h-1.5 rounded-full bg-primary animate-glow-pulse" />
-          PORTFOLIO 2026
+        {/* Animated brand mark above the headline */}
+        <div className="relative animate-fade-in flex flex-col items-center gap-4">
+          <div className="relative">
+            {/* Pulsing glow ring behind logo */}
+            <div
+              className="absolute inset-0 rounded-full blur-2xl opacity-70 animate-glow-pulse"
+              style={{ background: "radial-gradient(circle, var(--primary), transparent 70%)" }}
+            />
+            <img
+              src={logoGeebin}
+              alt="Geebin A R logo"
+              className="relative w-24 h-24 sm:w-28 sm:h-28 object-contain animate-spin-slow drop-shadow-[0_0_20px_oklch(0.7_0.18_50/0.6)]"
+            />
+          </div>
+          <div className="inline-flex items-center gap-2 glass px-4 py-1.5 rounded-full text-[10px] tracking-[0.35em] uppercase text-muted-foreground">
+            <span className="w-1.5 h-1.5 rounded-full bg-primary animate-glow-pulse" />
+            PORTFOLIO 2026
+          </div>
         </div>
 
         <h1 className="font-display leading-[0.85] tracking-tight text-foreground">
-          <span className="block text-[3.2rem] sm:text-7xl md:text-8xl lg:text-[10rem] char-stagger">
+          <span className="block text-[3.2rem] sm:text-7xl md:text-8xl lg:text-[10rem] char-stagger inline-flex items-center justify-center gap-4 sm:gap-6 flex-wrap">
+            <img
+              src={logoGeebin}
+              alt=""
+              aria-hidden="true"
+              className="hidden sm:inline-block w-16 md:w-20 lg:w-28 h-16 md:h-20 lg:h-28 object-contain animate-spin-slower drop-shadow-[0_0_18px_oklch(0.7_0.18_50/0.55)]"
+            />
             {title.split("").map((c, i) => (
               <span
                 key={i}
