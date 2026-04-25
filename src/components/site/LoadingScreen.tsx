@@ -11,13 +11,9 @@ export function LoadingScreen() {
     // Hold the loader for ~2.2s, then play the curtain exit
     const leaveTimer = setTimeout(() => setLeaving(true), 2200);
     const hideTimer = setTimeout(() => setHidden(true), 3300);
-    // Lock body scroll while loader is up
-    const original = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
     return () => {
       clearTimeout(leaveTimer);
       clearTimeout(hideTimer);
-      document.body.style.overflow = original;
     };
   }, []);
 
