@@ -76,11 +76,30 @@ export function Hero() {
               className="absolute inset-0 rounded-full blur-2xl opacity-70 animate-glow-pulse"
               style={{ background: "radial-gradient(circle, var(--primary), transparent 70%)" }}
             />
-            <img
-              src={logoGeebin}
-              alt="Geebin A R logo"
-              className="relative w-24 h-24 sm:w-28 sm:h-28 object-contain animate-logo-hue"
-            />
+            <div className="relative w-24 h-24 sm:w-28 sm:h-28 logo-shimmer-wrap">
+              <img
+                src={logoGeebin}
+                alt="Geebin A R logo"
+                className="relative w-full h-full object-contain animate-logo-hue"
+              />
+              {/* Diagonal shine sweep masked to the logo silhouette */}
+              <div
+                aria-hidden
+                className="absolute inset-0 pointer-events-none animate-logo-shine mix-blend-screen"
+                style={{
+                  background:
+                    "linear-gradient(115deg, transparent 35%, oklch(1 0 0 / 0.85) 50%, transparent 65%)",
+                  WebkitMaskImage: `url(${logoGeebin})`,
+                  maskImage: `url(${logoGeebin})`,
+                  WebkitMaskRepeat: "no-repeat",
+                  maskRepeat: "no-repeat",
+                  WebkitMaskSize: "contain",
+                  maskSize: "contain",
+                  WebkitMaskPosition: "center",
+                  maskPosition: "center",
+                }}
+              />
+            </div>
           </div>
           <div className="inline-flex items-center gap-2 glass px-4 py-1.5 rounded-full text-[10px] tracking-[0.35em] uppercase text-muted-foreground">
             <span className="w-1.5 h-1.5 rounded-full bg-primary animate-glow-pulse" />

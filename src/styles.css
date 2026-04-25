@@ -340,6 +340,13 @@
 .animate-curtain-down { animation: curtain-down 1s cubic-bezier(0.85, 0, 0.15, 1) forwards; }
 .animate-logo-zoom-in { animation: logo-zoom-in 1.2s var(--transition-cinematic) both; }
 .animate-logo-hue { animation: logo-hue 8s linear infinite; }
+@keyframes logo-shine {
+  0%   { transform: translateX(-120%); opacity: 0; }
+  20%  { opacity: 1; }
+  80%  { opacity: 1; }
+  100% { transform: translateX(120%); opacity: 0; }
+}
+.animate-logo-shine { animation: logo-shine 3.5s ease-in-out infinite; }
 
 .text-light-sweep {
   background: linear-gradient(
