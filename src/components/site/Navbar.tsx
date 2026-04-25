@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { ThemeToggle } from "./ThemeToggle";
+import logoGeebin from "@/assets/logo-geebin.png";
 
 const links = [
   { label: "Work", href: "#featured" },
@@ -39,7 +40,12 @@ export function Navbar() {
         }}
       />
       <div className="mx-auto max-w-7xl px-6 flex items-center justify-between gap-4">
-        <a href="#top" className="font-display text-xl tracking-widest text-foreground shrink-0">
+        <a href="#top" className="group font-display text-xl tracking-widest text-foreground shrink-0 inline-flex items-center gap-2.5">
+          <img
+            src={logoGeebin}
+            alt="Geebin A R logo"
+            className="w-9 h-9 object-contain animate-spin-slow drop-shadow-[0_0_12px_oklch(0.7_0.18_50/0.5)] group-hover:scale-110 transition-transform"
+          />
           GEEBIN<span className="text-primary"> </span>A R
         </a>
         {/* Center pill nav with strong blur */}
